@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hibernate-utils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../Faculdade/Programacao - Git/Biblioteas e jar - prog4/hibernate-utils.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

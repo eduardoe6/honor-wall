@@ -1,0 +1,22 @@
+package br.edu.unisep.honor.dao;
+
+import br.edu.unisep.honor.entity.Elogio;
+import br.edu.unisep.honor.entity.Usuario;
+import com.rcpadilha.hibernate.dao.HibernateDao;
+import com.rcpadilha.hibernate.factory.HibernateSessionFactory;
+
+import java.util.List;
+
+public class ElogioDao extends HibernateDao<Elogio> {
+
+    public List<Elogio> listar(String login) {
+        var session = HibernateSessionFactory.getSession();
+        var q = session.createQuery("from Elogio where remetente.id = :REMETENTE", Elogio.class);
+        q.setParameter("REMETENTE", login);
+        var lista = q.list();
+
+        session.close();
+
+        return lista;
+    }
+}
